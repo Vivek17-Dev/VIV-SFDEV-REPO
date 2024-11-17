@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Laon_amount_rule</fullName>
+    <active>false</active>
+    <errorConditionFormula>Loan_amount__c    &lt;   500000</errorConditionFormula>
+    <errorDisplayField>Loan_amount__c</errorDisplayField>
+    <errorMessage>Loan amount should not be less than 5 lakhs.</errorMessage>
+</ValidationRule>

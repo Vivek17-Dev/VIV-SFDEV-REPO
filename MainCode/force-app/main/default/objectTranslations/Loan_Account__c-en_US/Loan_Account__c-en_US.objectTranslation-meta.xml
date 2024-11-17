@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Loan Account</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>LoanAccount</value>
+    </caseValues>
+    <layouts>
+        <layout>Loan Account Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- rt1 --></label>
+        <name>rt1</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Loan amount should not be less than 5 lakhs. --></errorMessage>
+        <name>Laon_amount_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- PAN number should be in proper format. --></errorMessage>
+        <name>PanNumber</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Reject reason should not be blank --></errorMessage>
+        <name>Reject_Reason_rule</name>
+    </validationRules>
+</CustomObjectTranslation>

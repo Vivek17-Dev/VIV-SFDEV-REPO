@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Mail_about_Rejection_of_Loan</fullName>
+        <description>Mail about Rejection of Loan</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/RejectionMail</template>
+    </alerts>
+    <rules>
+        <fullName>RejectionMail</fullName>
+        <actions>
+            <name>Mail_about_Rejection_of_Loan</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Loan_Amount__c</field>
+            <operation>lessThan</operation>
+            <value>500000</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>
