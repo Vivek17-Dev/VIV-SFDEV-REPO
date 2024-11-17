@@ -1,0 +1,14 @@
+<template>
+    <lightning-combobox
+            name="Account"
+            label="Account"
+            value={value}
+            placeholder="Select Account"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+
+    <p>Selected value is: {value}</p>
+    <template lwc:if={value}>
+        <c-contact-search _data ={contactdata}></c-contact-search>
+    </template>
+</template>

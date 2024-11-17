@@ -1,0 +1,38 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="con" type="String"/>
+    <aura:attribute name="contact" type="Contact"/>
+    <aura:attribute name="collateral" type="Collateral__c"/>
+    
+    
+    <force:recordData aura:id="applicantRecord"
+                      recordId="{!v.con}"
+                      targetFields="{!v.contact}"
+                      layoutType="FULL"/>
+    
+    <force:recordData aura:id="collateralRecord"
+                      recordId="{!v.con}"
+                      targetFields="{!v.collateral}"
+                      layoutType="FULL"/>
+    <div>
+        
+        <lightning:recordViewForm recordId="{!v.con}" objectApiName="Contact">
+            <lightning:outputField fieldName="Title" />
+            <lightning:outputField fieldName="AccountId" />
+            <lightning:outputField fieldName="Phone" />
+            <lightning:outputField fieldName="Email" />
+            <lightning:outputField fieldName="MailingAddress" />
+            
+        </lightning:recordViewForm>
+        
+    </div>
+    <div>
+        
+        <lightning:recordViewForm recordId="{!v.con}" objectApiName="Collateral__c">
+            <lightning:outputField fieldName="Collateral_Value__c" />
+            <lightning:outputField fieldName="Collateral_Type__c" />
+            
+            
+        </lightning:recordViewForm>
+        
+    </div>
+</aura:component>

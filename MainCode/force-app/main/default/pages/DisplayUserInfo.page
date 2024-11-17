@@ -1,0 +1,11 @@
+<apex:page showHeader="false" >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            {! $User.FirstName } 
+           ({! $User.Username })
+            ({! IF($User.isActive, $User.Username, 'inactive') })
+            <apex:outputField title="FirstName"/>
+        </apex:pageBlockSection>
+    <apex:image />
+    </apex:pageBlock>
+</apex:page>
